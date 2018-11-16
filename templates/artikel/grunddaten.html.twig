@@ -1,0 +1,23 @@
+
+<div class="form-group row" style="position:relative;top:20px;">	
+	<div class="col-sm-5">
+			{{ form_row(form.warengruppe) }}
+			{{ form_row(form.unterwarengruppe) }}
+			{{ form_row(form.mengeneinheit) }}
+			{{ form_row(form.mwst) }}
+	</div>
+	<div class="vl"></div> <!-- -------- Vertikale Trennung -------- -->
+	<div class="col-sm-3">
+		<div class="form-group row" >
+			
+		</div>
+	</div>
+	<div class="col-sm-3" style="background: #FBF2EF; height: 350px; border: 1px solid #d4d4d4; border-radius: 4px;">	<!-- Daten	-->
+		<div class="form-group row" style="margin-left:10px">
+			{{ form_row(form.angelegtvon) }}
+			{{ form_row(form.angelegtam) }}
+			{{ form_row(form.updatevon) }}
+			{{ form_row(form.updateam) }}
+		</div>
+	</div>
+</div>

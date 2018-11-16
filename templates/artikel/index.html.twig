@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artikel bearbeiten{% endblock %}
+
+{% block body %}
+<style>
+    .wrapper { margin: 1em auto; max-width: 1200px; width: 95%; font: 18px/1.5 sans-serif; }
+    .wrapper code { background: #ffcccc; padding: 2px 6px; }
+	.vl { border-left: 1px solid gray; height: 280px; }
+</style>
+<div class="wrapper">
+	<div class="form-group row" style="position:relative;">	
+		<a class="btn btn-secondary btn-lg btn-block btn-danger" href="/artikel/neu">Neuen Artikel anlegen</a>
+	</div>
+	<div class="form-group row" style="position:relative;">			
+		<table class="table table-hover table-bordered table-sm">	<!--Artikel-->
+			<thead class="thead">
+					<tr>
+						<th scope="col" style="width: 16%">Bild</th>
+						<th scope="col" style="width: 59%">Bezeichnung</th>
+						<th scope="col" style="width: 10%">Betrag</th>
+						<th scope="col" style="width: 10%">Rechnungsdatum</th>
+						<th scope="col" style="width: 5%"></th>
+					</tr>
+			</thead>
+			<tbody>
+				{% for einArtikel in Artikel %}
+					<tr>
+						<td><img src="/assets/img/artikel/account-logout-2x.png" width="175" height="150" /></td>
+						<td>{{ einArtikel.bezeichnung1 }}</td>
+						<td>{{ einArtikel.listenpreis }}</td>			
+						<td>{{ einArtikel.angelegtam|date("d.m.Y") }}</td>			
+						<td>
+							<a class="btn btn-danger" href="{{ path('artikel_bearbeiten', { 'id': einArtikel.id }) }}">
+								<i class="material-icons">create</i>
+							</a>
+							</br>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

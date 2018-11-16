@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+
+
+
+<div class="collapse" id="neueSuche">
+	{{ form_start(ordersHeader_form) }}
+	<div class="form-group row" style="position:relative; top:15px;">
+	<div class="col-sm-1">
+		{{ form_label(ordersHeader_form.Auftragsnummer) }}
+	</div>
+	<div class="col-sm-2">		
+		{{ form_widget(ordersHeader_form.Auftragsnummer) }}
+	</div>
+	<div class="col-sm-6">
+		{{ form_row(ordersHeader_form.suche) }}
+	</div>				
+	{{ form_end(ordersHeader_form) }}    
+	</div><hr/>	
+</div>
+<p>
+  <button class="btn btn-seccondary" type="button" data-toggle="collapse" data-target="#neueSuche" aria-expanded="false" aria-controls="neueSuche">
+    Neue Suche
+  </button>
+</p>
+
+
+
+
+
+
+
+{% set test = test + 1 %}
+{{ test }}
